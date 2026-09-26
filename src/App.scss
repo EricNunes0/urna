@@ -31,6 +31,20 @@ button:hover {
 	height: 600px;
 }
 
+.urna-inline-border {
+	width: calc(100% - 15px);
+	height: calc(100% - 15px);
+	border: 1px solid #777;
+	border-radius: 20px;
+}
+
+.horizontal {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
 #screen {
 	border: 1px solid #888;
 	width: 600px;
@@ -38,11 +52,9 @@ button:hover {
 }
 
 #keys-main {
-	/*background-color: #555;*/
-}
-
-.urna-footer {
-	border: 1px solid #888;
+	background-color: #555;
+	border-radius: 10px;
+	padding: 5px;
 }
 
 $urna-button-height: 40px;
@@ -50,7 +62,7 @@ $urna-button-height: 40px;
 .urna-buttons {
 	border: none;
 	border-radius: 5px;
-	box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.6);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -59,12 +71,16 @@ $urna-button-height: 40px;
 	margin: 2px;
 	transition: all 0.3s;
 }
+.urna-buttons:active {
+	transform: translateY(1px);
+}
 .urna-buttons[class~="numbers"] {
 	background-color: #222;
 	flex-direction: row;
 	justify-content: start;
 	gap: 10px;
 	color: #fff;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	font-size: 28px;
 }
 .urna-buttons[class~="numbers"] span:nth-of-type(2) {
@@ -124,6 +140,10 @@ $urna-button-height: 40px;
 .urna-buttons[class~="actions"][class~="green"] span:nth-of-type(2) {
 	color: #68df6a;
 	font-size: 18px;
+}
+
+.hide-mobile[class~="horizontal"] {
+	display: none;
 }
 
 @media screen and (max-width: 768px) {
