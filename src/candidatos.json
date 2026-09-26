@@ -1,0 +1,74 @@
+{
+    "DF": [
+        {
+            "nome": "Chico Buarque",
+            "numero": "2605",
+            "imagem": "df/df-1.jpg"
+        },
+        {
+            "nome": "Zé Ramalho",
+            "numero": "0526",
+            "imagem": "df/df-2.jpg"
+        }
+    ],
+    "DE": [
+        {
+            "nome": "Carlos Drummond de Andrade",
+            "numero": "00321",
+            "imagem": "de/de-1.jpg"
+        },
+        {
+            "nome": "Machado de Assis",
+            "numero": "00543",
+            "imagem": "de/de-2.jpg"
+        }
+    ],
+    "S1": [
+        {
+            "nome": "Jorge Amado",
+            "numero": "330",
+            "imagem": "s1/s1-1.jpg"
+        },
+        {
+            "nome": "Cora Coralina",
+            "numero": "440",
+            "imagem": "s1/s1-2.jpg"
+        }
+    ],
+    "S2": [
+        {
+            "nome": "Gonzaguinha",
+            "numero": "110",
+            "imagem": "s2/s2-1.jpg"
+        },
+        {
+            "nome": "Luiz Gonzaga",
+            "numero": "660",
+            "imagem": "s2/s2-2.jpg"
+        }
+    ],
+    "GO": [
+        {
+            "nome": "Carolina Maria de Jesus",
+            "numero": "03",
+            "imagem": "go/go-1.jpg"
+        },
+        {
+            "nome": "Conceição Evaristo",
+            "numero": "04",
+            "imagem": "go/go-2.jpg"
+        }
+    ],
+    "PR": [
+        {
+            "nome": "Paulo Freire",
+            "numero": "01",
+            "imagem": "pr/pr-1.jpg"
+        },
+        {
+            "nome": "Darcy Ribeiro",
+            "numero": "02",
+            "imagem": "pr/pr-2.jpg"
+        }
+    ]
+}
