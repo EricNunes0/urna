@@ -18,14 +18,14 @@ function App() {
 	const [GOValid, setGOValid] = useState(false);
 	const [PR, setPR] = useState(null);
 	const [PRValid, setPRValid] = useState(false);
-	let candidatoTypes = ["Deputado Federal", "Deputado Estadual", "Senador - 1ª vaga", "Senador - 2ª vaga", "Governador", "Presidente"];
-	let candidatoMaxDigits = [4, 5, 3, 3, 2, 2];
-	let canvasBorder = 40;
-    let h1 = 56;
-    let h2 = 48;
-    let h3 = 40;
-    let h4 = 32;
-	let font = `Trebuchet MS`;
+	const candidatoTypes = ["Deputado Federal", "Deputado Estadual", "Senador - 1ª vaga", "Senador - 2ª vaga", "Governador", "Presidente"];
+	const candidatoMaxDigits = [4, 5, 3, 3, 2, 2];
+	const canvasBorder = 40;
+    const h1 = 56;
+    const h2 = 48;
+    const h3 = 40;
+    const h4 = 32;
+	const font = `Trebuchet MS`;
 
 	function telaBase(canvas, ctx) {
 		ctx.fillStyle = "black";
@@ -98,7 +98,7 @@ function App() {
 			ctx.strokeRect(60 * (i + 1) + (i * 10), 240, 60, 90);
 		};
 	}
-	
+
 	function tela0(canvas, ctx) {
 		ctx.font = `${h2}px Arial`;
 		ctx.fillStyle = "black";
@@ -397,8 +397,27 @@ function App() {
 	useEffect(() => {
 		const canvas = canvasRef.current;
 		const ctx = canvas.getContext("2d");
-		telaBase(canvas, ctx);
-		tela0(canvas, ctx);
+		/*telaBase(canvas, ctx);*/
+		ctx.fillStyle = "black";
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+		ctx.fillStyle = "white";
+		ctx.fillRect(canvasBorder, canvasBorder / 2, canvas.width - (canvasBorder * 2), canvas.height - (canvasBorder));
+		ctx.textAlign = "center";
+		ctx.font = `bold ${h4}px ${font}`;
+		ctx.fillStyle = "gray";
+		ctx.fillText("TREINAMENTO", canvas.width / 2, 110);
+		/*tela0(canvas, ctx);*/
+		ctx.font = `${h2}px Arial`;
+		ctx.fillStyle = "black";
+		ctx.fillText("Urna pronta para receber o seu voto", canvas.width / 2, 200);
+		ctx.fillText("Use o teclado numérico", canvas.width / 2, 200 + (h1 * 3));
+		ctx.fillText("para digitar o seu voto", canvas.width / 2, 200 + (h1 * 4.5));
+		ctx.font = `${h3}px Arial`;
+		ctx.fillStyle = "black";
+		ctx.fillText("Aperte a tecla CONFIRMA para iniciar o seu voto", canvas.width / 2, 650);
+		ctx.font = `bold ${h3}px Arial`;
+		ctx.fillStyle = "green";
+		ctx.fillText("CONFIRMA", 569, 650);
 	}, []);
 
 	return (
